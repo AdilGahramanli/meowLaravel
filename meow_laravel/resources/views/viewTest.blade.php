@@ -8,7 +8,8 @@
 <body>
     <h1>Résultat du fichier JSON</h1>
 
-    {{var_dump($data)}}
+    
+    {{var_dump($viewIndex)}}
     
 </body>
 </html>

@@ -63,7 +63,8 @@ class ControllerTest extends BaseController
                     "description" => "Ceci est le produit 2"
                 ]
                 ];
-        return view('viewTest', $data[$index]);
+        // return view('viewTest',['theData' => $data[$index]]);
+        return view('viewTest', ['viewIndex' =>$index]);
 
     }
 }
