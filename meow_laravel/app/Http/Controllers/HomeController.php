@@ -8,6 +8,6 @@ class HomeController extends Controller
 {
     //
     function homepage() {
-        return "Homepage";
+        return view('homepage', ['homepage'=> "homepage"]);
     }
 }

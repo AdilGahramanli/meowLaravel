@@ -9,11 +9,11 @@ class MeowController extends Controller
     //
     function datas() {
         
-        return "liste des messages";
+        return view('meows-list',['meowList'=>"liste des messages envoyée par controller"]);
     }
 
     function datasById($id) {
-        return "liste des messges pr l'id" . $id;
+        return view('meow-details',['details'=>"liste des messges par l'id " . $id]);
     }
 
 }
