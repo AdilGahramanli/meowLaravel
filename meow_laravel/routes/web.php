@@ -29,6 +29,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/data', [ControllerTest::class, 'index']);
 Route::get('/data/{index}', [ControllerTest::class, 'getData']);
 
-// Route::get('/', [HomeController::class, ]);
+Route::get('/', [HomeController::class, 'homepage']);
 Route::get('/meows', [MeowController::class, 'datas']);
-Route::get('/meow/{id}', [MeowController::class, 'datasById']);
+Route::get('/meows/{id}', [MeowController::class, 'datasById']);
