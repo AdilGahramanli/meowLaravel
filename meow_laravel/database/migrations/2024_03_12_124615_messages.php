@@ -13,13 +13,18 @@ return new class extends Migration
     {
         //
         Schema::create('messages', function (Blueprint $table) {
-            // $table->uuid('id')->primary();
+            $table->uuid('message_id');
+            $table->foreignId('id_users')->constrained('users');
+            // $table->foreign('user_id')->references('id')->on('users');
             // $table->text('content')->limit(300);
             // $table->timestamps();
-            $table->id();
-            $table->text('content')->limit(300);
+            // $table->foreignUuid('message_id')->constrained(
+            //     table->'users', indexName:'id');
+            // );
+            $table->text('message')->limit(300);
             // $table->timestamps();
-
+            
+            
         });
     }
 
