@@ -13,7 +13,9 @@ return new class extends Migration
     {
         //
         Schema::create('commentaires', function (Blueprint $table) {
-            $table->foreignUuid('commentaire_id');
+            $table->id('id');
+            // $table->foreignUuid('id_message')->constrained('messages');
+            $table->foreignId('id_message')->constrained('messages');
             $table->text("commentaire");
         });
     }
